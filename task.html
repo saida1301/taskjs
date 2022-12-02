@@ -9,132 +9,58 @@
 <body>
 
     <script>
-      // 1ci ve 2ci task
-        var a = 3;
-        var b = 2;
-        var c = 4;
-        console.log(a*a + b*b + c*c)
-        console.log((a+b+c)/3)
-       
-        // 3cu
-        for(var i = 1; i<100; i++){
-            console.log(i);
-        }
-      
-// 4cu
-for(var i =1; i<100; i++){
-  if(i % 2 === 0){
-    console.log(i);
-  }
+      //1ci
+function sum_sq(array) {
+  var sum = 0, 
+      i = array.length;
+  while (i--) 
+   sum += Math.pow(array[i], 2);
+  return sum;
 }
-// 5ci
-for(var i =1; i<100; i++){
-  if(i % 3 === 0){
-    console.log(i);
-  }
-}
-// 6ci
-// var number = prompt("Please enter your number",number);
-var number = 20;
-if(number === 1){
-  console.log('ne sade ne murekkeb');
-}
-else if(number >1){
-  for(var i = 2; i < number/2; i++){
-    if(number % i ===0){
-      console.log("murekkeb reqem")
-    }
-  }
-}
-// 7ci
-var numberSquare = 5;
-var stringSquare = '';
-for(var i=1; i<=numberSquare; i++){
-  for(var j=1; j<=numberSquare; j++){
-    stringSquare += '*';
-  }
-  stringSquare += '\n';
-}
-console.log(stringSquare);
-
-// 8ci
-var numberSquare = 5;
-var stringSquare = '';
-for(var i=0; i<=numberSquare; i++){
-  for (var j=1; j <= numberSquare - i; j++) {
-    stringSquare += '*';
-  }
-  stringSquare += '\n';
-}
-console.log(stringSquare);
-
-//9cu
-var numbr = 5;
-  if(numbr % 2 === 0){
-    console.log("2nin ustudu");
-  }
-  else{
-    console.log("deyil");
-  }
+ 
+console.log(sum_sq([...Array(100).keys()] )); 
 
 
-// 10cu
-function digits_count(n) {
-  var count = 0;
-  if (n >= 1) {
-    count++;
-    }
 
-  while (n / 10 >= 1) {
-    n /= 10;
-    count++;
-  }
 
-  return count;
+//2ci
+const arr = [...Array(7).keys()];
+
+var sum = 0;
+
+for (var number of arr) {
+    sum += number;
 }
 
-console.log(digits_count(322));
+average = sum / arr.length;
 
-console.log(digits_count(2005));
+console.log(average);
 
-// 11ci
-var numbers = [ 14, 10, 17, 25];
-console.log(numbers.includes(10));
-
-// 12ci
-const myArray = [20, 23, 27];
-
-var minElement = Math.min.apply(Math, myArray);
-console.log(minElement); 
-var maxElement = Math.max.apply(Math, myArray);
-console.log(maxElement); 
-
-// 13cu
-var a = 4;
-var b = 5;
-var c = 7;
-var d = 9;
-var e = 1;
-
-
-var sahe1 = a *b;
-var sahe2 = c * d * e;
-
-if(sahe1 > sahe2){
-  console.log("kecer")
-}else{
-  console.log("kecmez")
+//3cu
+function divided(n, m,x) {
+  for (let i = n; i < m; i++) {
+if (i % x === 0) {
+   sum +=i;
+}
+    
+  }
+  return sum;
 }
 
+
+//4cu
+function divided(n, m,) {
+  for (let i = n; i < m; i++) {
+for (let j = 2; j < i; j++) {
+if (j % i === 0) {
+sum += i;
+}
   
-
-
-
-
-
-
-
-
+}
+ 
+  }
+  return sum;
+}
     </script>
 </body>
 
